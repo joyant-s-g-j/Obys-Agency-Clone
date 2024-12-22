@@ -19,6 +19,7 @@ html, body {
     z-index: 999;
     mix-blend-mode: difference;
     transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 #loader {
     height: 100%;
@@ -60,7 +61,6 @@ html, body {
     font-size: 5.3vw;
     text-transform: uppercase;
     font-weight: 900;
-    /* animation-name: anime; */
     opacity: 0;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -146,10 +146,30 @@ html, body {
     text-transform: uppercase;
     line-height: 7vw;
     font-weight: 900;
-    margin-bottom: 2vh;
+    border-bottom: 0.5vw solid white;
+    padding-bottom: 0.8vw;
+    transition: all ease 0.2s;
+    color: white;
 }
 .hero h2:hover {
     -webkit-text-stroke: 1px white;
     color: transparent;
     font-weight: 200;
+    border-bottom: 0.5vw solid transparent;
+}
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #141313;
+}
+#video-container {
+    height: 60vh;
+    width: 70%;
+    position: relative;
+    left: 30%;
+}
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
