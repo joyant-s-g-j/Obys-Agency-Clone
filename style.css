@@ -15,8 +15,8 @@ html, body {
     width: 100%;
     position: fixed;
     z-index: 999;
-    background-color: #0B0B0B;
-    padding: 15vh 20vw;
+    background-color: #000000;
+    padding: 21vh 15vw;
 }
 .line {
     height: fit-content;
@@ -42,7 +42,7 @@ html, body {
     text-align: right;
 }
 .line h1 {
-    font-size: 5vw;
+    font-size: 6vw;
     text-transform: uppercase;
     font-weight: 900;
 }
@@ -50,14 +50,49 @@ html, body {
     font-size: 5vw;
     text-transform: uppercase;
     font-weight: 900;
+    /* animation-name: anime; */
+    opacity: 0;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
+@keyframes anime {
+    0% {
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    47% {
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50% {
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+    100% {
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+}
+
 #main {
     position: relative;
-    background-color: #111;
+    background-color: #030303;
     width: 100%;
 }
 #page1 {
     height: 100vh;
     width: 100%;
-    background-color: #111;
+    background-color: #0e0d0d;
 }
