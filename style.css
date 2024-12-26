@@ -1,3 +1,23 @@
+@font-face {
+    font-family: "Plain Light";
+    src: url(assets/fonts/plain-regular-webfont.ttf);
+}
+
+@font-face {
+    font-family: "Plain Light";
+    src: url(assets/fonts/plain-light-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(assets/fonts/silkserif-regularitalic-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(assets/fonts/silkserif-lightitalic-webfont.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -10,11 +30,15 @@ html, body {
     height: 100%;
     width: 100%;
 }
+body {
+    overflow-x: hidden;
+}
 #crsr {
     height: 3vw;
     width: 3vw;
     border-radius: 50%;
     border: 1px solid white;
+    background-color: #fff;
     position: fixed;
     z-index: 999;
     mix-blend-mode: difference;
@@ -97,7 +121,7 @@ html, body {
 }
 #main {
     position: relative;
-    background-color: #030303;
+    background-color: #141313;
     width: 100%;
 }
 #page1 {
@@ -140,6 +164,7 @@ html, body {
     line-height: 7vw;
     font-weight: 900;
     margin-bottom: 2vh;
+    position: relative;
 }
 .hero h2 {
     font-size: 7vw;
@@ -148,7 +173,6 @@ html, body {
     font-weight: 900;
     border-bottom: 0.5vw solid white;
     padding-bottom: 0.8vw;
-    transition: all ease 0.2s;
     color: white;
 }
 .hero h2:hover {
@@ -160,16 +184,384 @@ html, body {
 #page2 {
     height: 100vh;
     width: 100%;
+    padding-top: 20vh;
+    position: relative;
     background-color: #141313;
 }
 #video-container {
-    height: 60vh;
-    width: 70%;
+    height: 65vh;
+    width: 71vw;
     position: relative;
-    left: 30%;
+    left: 28%;
+    background-image: url(oba.jpg);
+    background-size: cover;
+    background-position: center;
 }
+#video-cursor {
+    background-color: #FFA63d;
+    height: 8.5vw;
+    width: 8.5vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -15%;
+    left: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+#video-cursor i {
+    font-size: 3vw;
+}
+#video-container img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+}
+
 #video-container video {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    opacity: 0;
+}
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #141313;
+    position: relative;
+    padding: 7vh 0;
+}
+#page3-content{
+    width: 72vw;
+    margin-left: 28%;
+    position: relative;
+}
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+}
+#page3 h1::before {
+    content: "02";
+    position: absolute;
+    font-size: 4vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    left: -20%;
+    top: 15%;
+}
+#image-div-container {
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.image-div{
+    height: 35vw;
+    width: 25vw;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 2vw;
+}
+.image-div:nth-child(1){
+    height: 30vw;
+    width: 22vw;
+}
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+.page3-circle1 {
+    height: 20vw;
+    width: 20vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35vh;
+    margin-left: 10vw;
+    position: relative;
+}
+.page3-circle1 svg{
+    height: 40%;
+}
+.page3-circle2 {
+    height: 20vw;
+    width: 20vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8vw;
+    position: relative;
+}
+.page3-circle2 svg{
+    height: 40%;
+    rotate: -42deg;
+}
+.circle-in{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    scale: 0;
+    transition: all ease 0.3s;
+    opacity: 0;
+}
+.circle-in p{
+    font-size: 0.95vw;
+    color: black;
+    width: 70%;
+    font-weight: 500;
+    scale: 0;
+    transition: all ease 0.3s;
+    transition-delay: 0.3s;
+    opacity: 0;
+}
+.page3-circle1:hover .circle-in{
+    scale: 1;
+    opacity: 1;
+}
+.page3-circle1:hover .circle-in p{
+    scale: 1;
+    opacity: 1;
+}
+.page3-circle2:hover .circle-in{
+    scale: 1;
+    opacity: 1;
+}
+.page3-circle2:hover .circle-in p{
+    scale: 1;
+    opacity: 1;
+}
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #141313;
+    position: relative;
+    padding: 7vh 0;
+}
+#page4-content{
+    width: 72vw;
+    margin-left: 28%;
+    position: relative;
+}
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+}
+#page4-content h1::before {
+    content: "03";
+    position: absolute;
+    font-size: 4vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    left: -20%;
+    top: 15%;
+}
+#page4-content .underline{
+    height: 2px;
+    width: 100%;
+    background-color: #7a7676;
+    margin-top: 5vw;
+}
+#page4-content>p{
+    font-size: 1.5vw;
+    width: 50%;
+    margin-bottom: 5vw;
+    margin-top: 2vw;
+}
+#page4-flex {
+    display: flex;
+    
+}
+#page4-flex img{
+    width: 45%;
+}
+#page4-flex p{
+    font-size: 1vw;
+    width: 30%;
+    margin-left: 1vw;
+}
+#page4-blue-div {
+    background-color: #3f7df4;
+    width: 30vw;
+    padding: 3vw;
+    position: relative;
+    margin-top: -35vh;
+    margin-left: 25vw;
+}
+.blue-div-elam {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.5vw 0;
+    border-bottom: 2px  solid #cbcbcb;
+}
+.blue-div-elam h4 {
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+.blue-div-elam p {
+    width: 40%;
+    font-size: 1vw;
+}
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #141313;
+    position: relative;
+}
+.elem{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -1.5vw;
+}
+.elem h1{
+    font-size: 6vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation: animemar;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes animemar {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem2{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -1.5vw;
+}
+.elem2 h1{
+    font-size: 6vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    transform: translateX(calc(-100% - 20px));
+    animation-name: animemar;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+.elem span {
+    font-style: italic;
+    font-family: 'silk serif';
+    color: transparent;
+}
+.elem2 span {
+    font-style: italic;
+    font-family: 'silk serif';
+    color: transparent;
+}
+#footer {
+    height: 97vh;
+    width: 100%;
+    position: relative;
+    background-color: #141313;
+    padding-left: 30vw;
+    padding-right: 5vw;
+}
+#footer-text {
+    position: relative;
+}
+#footer-text h1 {
+    font-size: 8vw;
+    text-transform: uppercase;
+    position: relative;
+}
+#footer-text h2 {
+    font-size: 7.2vw;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10%;
+    font-weight: 500;
+    left: 0;
+    font-family: "silk serif";
+}
+#footer-text h2 span {
+    font-family: "silk serif";
+    opacity: 0;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+#footer-text::before {
+    content: "04";
+    position: absolute;
+    font-size: 4vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    left: -20%;
+    top: 15%;
+}
+.underline {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin: 2vw 0;
+}
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 5vw;
+    padding-top: 5vw;
+}
+#footer-div h6 {
+    font-size: 0.9vw;
+    margin-bottom: 1.5vw;
+}
+#footer-div h5 {
+    font-size: 1.6vw;
+}
+#footer>h5{
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+#flag {
+    height: 20vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
+#hero3{
+    position: relative;
+
 }
