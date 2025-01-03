@@ -1189,3 +1189,207 @@ body {
         font-weight: 500;
     }
 }
+@media (min-width: 768px) {
+
+    #page1 {
+        height: 70vh;
+    }
+    #nav-part2 h4 {
+        font-size: 1.5vw;
+    }
+      .hero{
+        width: 85%;
+        margin-left: 15%;
+    }
+    .hero h1 {
+        font-size: 9vw;
+        line-height: 9vw;
+    }
+    .hero h2 {
+        font-size: 9vw;
+        line-height: 9vw;
+    }
+    #page2 {
+        height: 65vh;
+        padding-top: 10vh;
+    }
+    #video-container {
+        height: 50vh;
+        width: 85vw;
+        left: 15%;
+    }
+      #video-cursor {
+        height: 12vw;
+        width: 12vw;
+        top: -8%;
+        left: 75%;
+    }
+    #video-cursor i {
+        font-size: 5vw;
+    }
+    #page3 {
+        min-height: 110vh;
+        padding: 8vh 0;
+    }
+
+    #page3-content {
+      width: 90vw;
+      margin-left: 5%;
+    }
+
+    #page3 h1 {
+        font-size: 10vw;
+        line-height: 10vw;
+    }
+
+    #page3 h1::before {
+        font-size: 7vw;
+        left: -15%;
+        top: 5%;
+    }
+    #image-div-container{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .image-div {
+        height: 50vw;
+        width: 40vw;
+        margin: 1.5vw;
+    }
+    
+    .image-div:nth-child(1) {
+        height: 50vw;
+        width: 40vw;
+        margin: 1.5vw;
+    }
+
+    .page3-circle1, .page3-circle2 {
+        display: none;
+    }
+
+    #page4 {
+        min-height: 100vh;
+        padding: 8vh 0;
+    }
+
+    #page4-content {
+      width: 90vw;
+      margin-left: 5%;
+    }
+
+    #page4-content h1 {
+         font-size: 10vw;
+         line-height: 10vw;
+    }
+
+    #page4-content h1::before {
+        font-size: 7vw;
+        left: -15%;
+        top: 5%;
+    }
+
+     #page4-content > p {
+        font-size: 2.5vw;
+        width: 70%;
+        margin-bottom: 7vw;
+        margin-top: 5vw;
+    }
+
+    #page4-flex img {
+        width: 60%;
+    }
+
+    #page4-flex p {
+        font-size: 1.6vw;
+        width: 35%;
+        margin-left: 3vw;
+    }
+
+    #page4-blue-div {
+        width: 50vw;
+        padding: 5vw;
+        margin-top: -25vh;
+        margin-left: 15vw;
+    }
+
+    .blue-div-elam h4 {
+        font-size: 2.2vw;
+    }
+
+    .blue-div-elam p {
+        font-size: 1.7vw;
+    }
+
+    .elem h1 {
+        font-size: 9vw;
+    }
+
+    .elem2 h1 {
+        font-size: 9vw;
+    }
+    #page5{
+        min-height: 70vh;;
+    }
+    /* -------- FOOTER STYLES (Corrected)-------- */
+   #footer {
+        height: auto; /* Changed from 95vh to auto */
+        padding-left: 10vw;
+        padding-right: 5vw;
+        padding-bottom: 5vh; /* Add some padding at the bottom */
+        
+    }
+
+     #footer-text h1 {
+        font-size: 12vw;
+    }
+
+    #footer-text h2 {
+        font-size: 12vw;
+    }
+
+     #footer-text::before {
+        display: none;
+    }
+    
+    #footer-div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; /* Stack items vertically */
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; /* Align items to left */
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; /* Align items to the top */
+        padding-right: 5vw;
+        padding-top: 2vw; /* Reduce padding */
+
+    }
+    .box{
+        margin-bottom: 5vw;
+    }
+    #footer-div h6 {
+        font-size: 1.5vw;
+         margin-bottom: 1vw;
+    }
+    
+     #footer-div h5 {
+        font-size: 2.2vw;
+    }
+
+    #footer > h5 {
+        font-size: 1.6vw;
+       margin-top: 3vw; /* Add some spacing */
+    }
+}
